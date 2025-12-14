@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aliyi Abdela - Personal Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            margin-bottom: 1rem;
+            color: #e74c3c;
+        }
+        
+        nav {
+            background: #2c3e50;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        
+        nav a:hover {
+            background: #e74c3c;
+        }
+        
+        section {
+            padding: 2rem;
+            margin: 1rem auto;
+            max-width: 1200px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: none;
+        }
+        
+        section.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        li:before {
+            content: "•";
+            color: #e74c3c;
+            position: absolute;
+            left: 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        .major-header {
+            background-color: sandybrown !important;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .contact-list a {
+            color: #e74c3c;
+            text-decoration: none;
+            padding: 5px;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        
+        .contact-list a:hover {
+            color: #c0392b;
+            transform: translateY(-2px);
+        }
+        
+        .media-gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        
+        .media-gallery img:hover {
+            transform: scale(1.02);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #2c3e50;
+            color: white;
+            margin-top: 2rem;
+        }
+        
+        .home-content {
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        
+        .welcome-message {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Personal Website!</h1>
+        <nav>
+            <a href="#" onclick="showSection('home')">Home</a> | 
+            <a href="#" onclick="showSection('background')">Background</a> | 
+            <a href="#" onclick="showSection('courses')">Courses</a> | 
+            <a href="#" onclick="showSection('contact')">Contact</a> | 
+            <a href="#" onclick="showSection('media')">Media</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="active">
+        <h2 class="section-title">About Me</h2>
+        <div class="home-content">
+            <p class="welcome-message">
+                Hello! I'm <span class="highlight">Aliyi Abdela</span>, a Computer Science student at Jigjiga University. 
+                I'm passionate about programming and web development, with a strong desire to become a professional developer.
+                This website showcases my background, skills, and journey in the world of technology.
+            </p>
+            <p class="welcome-message">
+                Explore the different sections to learn more about my education, courses, and how to connect with me!
+            </p>
+        </div>
+    </section>
+
+    <!-- Background Section -->
+    <section id="background">
+        <h2 class="section-title">My Background Information</h2>
+        <div class="background-content">
+            <h3>Education and Experience</h3>
+            <p>I'm currently pursuing my bachelor's degree in Computer Science and aspire to become a professional developer.</p>
+            <ul>
+                <li><strong>Education:</strong> Jigjiga University - Computer Science (Bachelor Degree)</li>
+                <li><strong>Career Goal:</strong> To become a professional software developer after graduation</li>
+            </ul>
+            
+            <h3 style="margin-top: 30px;">Personal Statement</h3>
+            <p>I will be a programmer! I'm dedicated to mastering programming skills and contributing to the tech industry through innovative solutions.</p>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses">
+        <h2 class="section-title">Courses and Skills</h2>
+        <h3>Computer Science Courses</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Category</th>
+                    <th>Course Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="major-header">
+                    <td></td>
+                    <td colspan="2">Major Courses</td>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Major</td>
+                    <td>Web Programming</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Major</td>
+                    <td>Advanced Database</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Major</td>
+                    <td>Java Programming</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Major</td>
+                    <td>Object Oriented Programming</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Major</td>
+                    <td>Operating System</td>
+                </tr>
+
+                <tr class="major-header">
+                    <td></td>
+                    <td colspan="2">Common Courses</td>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Common</td>
+                    <td>General Psychology</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Common</td>
+                    <td>Mathematics</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Common</td>
+                    <td>English</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Common</td>
+                    <td>Logic</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Common</td>
+                    <td>Inclusiveness</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Contact With Me! 🔗</h2>
+        <p>Feel free to reach out through my social media or email:</p>
+        
+        <ul class="contact-list">
+            <li>
+                <a href="https://www.facebook.com/share/1C4q2H2p3B/" target="_blank">
+                    Facebook
+                </a>
+            </li>
+            <li>
+                <a href="http://www.youtube.com/@AliyiAbdela-q8m" target="_blank">
+                    YouTube
+                </a>
+            </li>
+            <li>
+                <a href="https://www.tiktok.com/@alexabdex?_r=1&_t=ZM-921ClCzkdqt" target="_blank">
+                    Tiktok 
+                </a>
+            </li>
+            <li>
+                <a href="mailto:aliyiabdela136@gmail.com" target="_blank">
+                    Email 📧: aliyiabdela136@gmail.com
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Media Section -->
+    <section id="media">
+        <h2 class="section-title">My Media Gallery</h2>
+        <div class="media-gallery">
+            <h3>Photo Highlights</h3>
+            <p>Currently, this is just a placeholder for future media content.</p>
+            <img src="pictures/B.jpg" alt="Personal Photo" style="max-width: 300px; display: block; margin: 20px auto;">
+            <p>More photos and media content will be added soon!</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Aliyi Abdela - Personal Website</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show the selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Update active nav link
+            document.querySelectorAll('nav a').forEach(link => {
+                link.style.fontWeight = 'normal';
+            });
+            event.target.style.fontWeight = 'bold';
+            
+            return false;
+        }
+        
+        // Set home as active by default
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('nav a').style.fontWeight = 'bold';
+        });
+    </script>
+</body>
+</html>
